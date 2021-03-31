@@ -1,0 +1,280 @@
+html{
+    font-family: Verdana, serif;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    color: black;
+    width: 100%;
+    max-height: 100%;
+}
+
+/* Partie 1 */
+
+.partie-1{
+    position: relative;
+    background-image: url("Plan de travail 2.png");
+    height: 1080px;
+    width: 100%;
+}
+
+#logo{
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-self: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.enTete{
+    position: relative;
+    color: black;
+    top: 250px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 30px;
+}
+
+/* Animation flèche */
+
+#fleche{
+    display: flex;
+    position: relative;
+    top: 200px;
+    width: 20vw;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: bougeFleche ease-out 1s;
+    animation-iteration-count: infinite ;
+}
+
+@keyframes bougeFleche {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(50px);
+    }
+}
+
+/* Partie 2 */
+
+.partie-2{
+    border-top: solid black 1px;
+}
+
+
+.partie-2>*{
+
+    display: flex;
+    justify-content: space-around ;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+#icones{
+    margin-top: 50px;
+}
+
+#categories{
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+    color: black;
+}
+
+.texte{
+    margin-bottom: 50px;
+    color: black;
+    font-size: 18px;
+}
+
+#texte1{
+    width: 400px;
+}
+
+#texte2{
+    width: 400px;
+}
+
+
+.categorie{
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Partie 3 */
+
+.images{
+    background-image: url("Plan2.png");
+}
+
+#vide{
+    height: 50px;
+    background-color: white;
+    width: 100%;
+}
+
+#ligne {
+    display: flex;
+    margin-right: 0;
+    color: black;
+    height: 400px;
+    background-color: rgb(20, 59, 101, 0.1);
+}
+
+#ligne>div{
+    margin-right: 150px;
+}
+
+#ligne>div>div>h3{
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#ligne2{
+    display: flex;
+    color: black;
+    background-color: rgb(20, 59, 101, 0.1);
+    height: 400px;
+}
+
+#ligne2>div{
+    margin-left: 150px;
+}
+
+#ligne2>div>div>h3{
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#matieres{
+    display: flex;
+    justify-content: left;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: 50px;
+    width: 500px ;
+    height: 300px;
+    z-index: 3;
+    border: solid 1px black;
+}
+
+#plusieurs{
+    display: flex;
+    justify-content: right;
+    margin-top: 50px;
+    margin-right: 150px;
+    margin-left: 50px;
+    width: 500px ;
+    height: 300px;
+    z-index: 2;
+    border: solid 1px black;
+}
+
+
+/* Partie 4 */
+
+.partie-4>.icones{
+    margin-top: 50px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+.icones>div {
+    width: 410px;
+    height: auto;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-between;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+/* Footer */
+
+.largeurFooter{
+    background-color: rgb(20, 59, 101, 0.1);
+    width: 100%;
+}
+
+#texteFooter{
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mentionLegales{
+    margin-left: 200px;
+    font-weight: bold;
+    font-style: italic;
+    width: 200px;
+    border-bottom: solid 1px black ;
+}
+
+.reseauxSociaux{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin-right: 200px;
+}
+
+#rejoindre{
+    text-align: left;
+    margin-right: 200px;
+    font-weight: bold;
+    font-style: italic;
+    width: 200px;
+    border-bottom: solid 1px black ;
+}
+
+#iconesFooter{
+    position: relative;
+    margin-left: 770px ;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+}
+
+#iconesFooter>div>img{
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 40px;
+    height: 40px;
+}
+
+/*
+#quiSommeNous{
+    text-align: center;
+}
+
+#presentation{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+ */
+
