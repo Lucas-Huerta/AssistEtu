@@ -53,7 +53,7 @@ var Conseils = Vue.component('Conseils',{
     mounted(){
 
         // Appel Ajax via axios liste des villageois
-        axios.get('Listes/listeUtilisateur.php')
+        axios.get('BackEndAssistEtu/Listes/listeUtilisateur.php')
             .then((response) => {
                 this.listeUtilisateurs = response.data;
                 console.log(this.listeUtilisateurs);
@@ -63,7 +63,7 @@ var Conseils = Vue.component('Conseils',{
             })
 
         // Appel Ajax via axios liste des villageois
-        axios.get('Listes/listConseils.php')
+        axios.get('BackEndAssistEtu/Listes/listConseils.php')
             .then((response) => {
                 this.listeConseils = response.data;
                 console.log(this.listeConseils);
