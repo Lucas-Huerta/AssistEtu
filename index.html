@@ -3,168 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <title>Assist'Etu</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
+
+    <!-- JQuery Avant Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+    <!-- Bootstrap 4 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <!-- VueJS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- Vue-router pour injection des composants => routage & navigation -->
+    <script src="https://unpkg.com/vue-router"></script>
+
+    <!-- Lib Axios pour Ajax -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- Librairie momentJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js">
+    </script>
+
+
+    <!-- CSS perso -->
+    <link href="Styles/style.css" type="text/css" rel="stylesheet">
+
 </head>
 <body>
 
-<div class="partie-1">
-    <div>
-        <div>
-            <img id="logo" src="img/Logo/Logo2.png" alt="Logo d'Assist'Etu">
-        </div>
-        <div class="enTete">
-            <p id="texteAcroche">
-                Entrez votre catégorie dès maintenant !
-            </p>
-        </div>
-        <div class="hauteurFleche">
-            <a href="#">
-                <img id="fleche" src="img/fleche.png" alt="image de fleche">
-            </a>
-        </div>
-    </div>
-</div>
+<div id="app">
 
-<div class="partie-2">
-        <div id="iconesEnTete">
-            <img src="img/Icones/iconeDiplomer.png" alt="icone Etudiant">
-            <img src="img/Icones/iconeProf.png" alt="icone Réunion">
-        </div>
-        <div id="categories">
-            <a href="#">
-                <h3>
-                    Étudiant :
-                </h3>
-            </a>
+    <!-- NAVBAR-->
+    <header>
+        <nav>
+            <div id="containerNavbar">
+                <div id="containerNavbarTextes">
+                    <ul>
+                        <li>
+                            <router-link
+                                    class="nav-link"
+                                    to="/">
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                    :to="{name:'Accueil'}">
 
-            <a href="#">
-                <h3>
-                    Professeur :
-                </h3>
-            </a>
-        </div>
-        <div class="texte">
-            <p id="texteEtudiant">
-                Vous êtes étudiant et vous recherchez de l'aide dans
-                certaines matières ? Nous sommes la pour vous aider !
-            </p>
-            <p id="texteProfesseur">
-                Enseignant et envie de transmettre toujours plus de savoir
-                à ces nouvelles générations ? Rejoignez nous dès maintenant !
-            </p>
-        </div>
-</div>
+                               Accueil
 
-<div class="partie-3">
-    <div class="images">
-        <div id="premiereLigne">
-            <a href="#">
-                <img id="matieres" src="img/livres.jpg" alt="image de matières">
-            </a>
-            <div>
-                <div>
-                    <h3>
-                        Les matières
-                    </h3>
-                </div>
-                <div>
-                    <p>
-                        Afin de trouvez l'aide qu'il vous faut, la page matière est là
-                        pour vous guider dans les matières, leurs programmes et les échanges dedans !
-                    </p>
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                :to="{name:'Matiere'}">
+                                Matière
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                    :to="{name:'Conseils'}">
+                                Conseils
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link
+                                    :to="{name:'Localisation'}">
+                                Localisation
+                            </router-link>
+                        </li>
+                        <li>
+                            <a href="#"><span>L'association</span></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div id="vide">
+        </nav>
 
-        </div>
-        <div id="deuxiemeLigne">
-            <div>
-                <div>
-                    <h3>
-                        Rassemblons nous !
-                    </h3>
-                </div>
-                <div>
-                    <p>
-                       Vous préférez avoir de vrais échanges que rester chez vous devant votre écran ?
-                        Organiser dès maintenant une réunion dans une bibliothèque ou un lieu
-                        calme près de chez vous !
-                    </p>
-                </div>
-            </div>
-            <a href="#"><img id="reunions" src="img/rassemblement.jpg" alt="image fonctionnalité étudier a plusieurs">
-            </a>
-        </div>
-    </div>
-</div>
+    </header>
 
-<div class="partie-4">
-    <div class="iconesFin">
-        <div>
-            <img src="img/Icones/iconeSolution.png" alt="icone d'aide au etudes">
-            <p>
-                En utilisant Assist'Etu nous vous offrons de l'aide afin de vous en sortir
-                et de pouvoir décrocher l'école ou les études que vous désirer.
-                Tout cela gratuitement
-            </p>
-        </div>
-        <div>
-            <img src="img/Icones/iconeSchool.png" alt="icone pour la facilité">
-            <p>
-                L'école sera plus facile, fini le stress et de ne pas avoir vraiment compris
-                votre leçon.
-            </p>
-        </div>
-        <div>
-            <img src="img/Icones/iconeEnsemble.png" alt="icone ensemble">
-            <div>
-                <p>
-                    Vous avez aussi surtout fini d'être seul, ici il y a des personnes de bonnes
-                    volontés pour vous aider. Autant entre étudiants qu'entre professeurs.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+    <!-- point insertion des composants-->
+    <router-view></router-view>
+    <!-- Modal -->
 
-<div class="largeurFooter">
-    <div class="largeurElement">
-        <footer>
-            <div id="texteFooter">
-                <div id="mentionLegales">
-                    <a href="#">
-                        <p>
+    <!-- FOOTER-->
+    <div class="largeurFooter">
+        <div class="largeurElement">
+            <footer>
+                <div id="elementFooter">
+                    <div id="mentionLegales">
+                        <div>
+                            <img src="img/Logo/Logo2.png" alt="logo de notre site">
+                        </div>
+                        <p class="titresFooter">
+                            A propos
+                        </p>
+                        <p class="texteFooter">
+                            Ce projet à été réalisé collectivement dans le cadre d'un exercice
+                            pédagogique au sein du département MMI de Montbéliard.
+                        </p>
+                        <p class="texteFooter">
+                            Le but de ce site web était de créer un site web à partir d'un sujet viable
+                            économiquement et ce sur tout un semestre.
+                        </p>
+                    </div>
+
+                    <div id="pagesFooter">
+                        <div class="titresFooter">
+                            <router-link
+                                    :to="{name:'Matiere'}">
+                                Matière
+                            </router-link>
+                        </div>
+                        <div class="titresFooter">
+                            <router-link
+                                    :to="{name:'Conseils'}">
+                                Conseils
+                            </router-link>
+                        </div>
+                        <div class="titresFooter">
+                            <router-link
+                                    :to="{name:'Localisation'}">
+                                Localisation
+                            </router-link>
+                        </div>
+                        <div class="titresFooter">
+                            <router-link
+                                    :to="{name:'Association'}">
+                                L'association
+                            </router-link>
+                        </div>
+                    </div>
+
+                    <div id="contactFooter">
+                        <p class="titresFooter">
+                            Contact
+                        </p>
+                        <p class="texteFooter">
+                           Nous contacter
+                        </p>
+                        <p class="titresFooter">
+                            Légal
+                        </p>
+                        <p class="texteFooter">
                             Mentions légales
                         </p>
-                    </a>
-                </div>
+                    </div>
 
-                <div id="rejoindre">
-                    <p>
-                        Rejoignez nous
-                    </p>
-                </div>
-            </div>
-
-            <div class="reseauxSociaux">
-                <div id="iconesFooter">
-                    <div>
-                        <img src="img/Icones/Reseaux/discord.png" alt="iconeDiscord">
-                    </div>
-                    <div>
-                        <img src="img/Icones/Reseaux/facebook.png" alt="iconeFacebook">
-                    </div>
-                    <div>
-                        <img src="img/Icones/Reseaux/insta.png" alt="iconeInsta">
-                    </div>
-                    <div>
-                        <img src="img/Icones/Reseaux/twitter.png" alt="iconeTwitter">
+                    <div class="reseauxSociaux">
+                        <div id="iconesFooter">
+                            <div>
+                                <img src="img/Icones/Reseaux/discord.png" alt="iconeDiscord">
+                            </div>
+                            <div>
+                                <img src="img/Icones/Reseaux/facebook.png" alt="iconeFacebook">
+                            </div>
+                            <div>
+                                <img src="img/Icones/Reseaux/insta.png" alt="iconeInsta">
+                            </div>
+                            <div>
+                                <img src="img/Icones/Reseaux/twitter.png" alt="iconeTwitter">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
 </div>
+
+
+<!-- les composants utilisés -->
+<script src="Accueil.vue.js"></script>
+<script src="Matiere.vue.js"></script>
+<script src="Conseils.vue.js">
+</script>
+
+
+
+<script>
+    // Les routages / navigation de l'application
+    var routes = [
+        {path: '/',				    name:"Accueil",		           component:Accueil},
+
+        {path: '/Matiere',	        name:"Matiere",		           component:Matiere},
+        {path: '/Conseils',	        name:"Conseils",		       component:Conseils},
+
+    ]
+    // Initialisation du router
+    var router = new VueRouter(
+        {routes: routes}
+    )
+    // La vue de l'application (id="app")
+    var app = new Vue({
+        el:"#app",
+        router:router
+    })
+</script>
+
 </body>
 </html>
