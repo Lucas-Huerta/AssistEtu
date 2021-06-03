@@ -2,7 +2,7 @@
 
 header("Access-Control-Allow-Origin: *");
 
-require_once '../cnx.php';
+require_once '../../cnx.php';
 require_once '../Classes/class.Utilisateur.php';
 
     // Ordre sql

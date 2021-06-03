@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 
-require_once '../cnx.php';
+require_once '../../cnx.php';
 require_once '../Classes/class.Conseils.php';
 
 $sql = "SELECT * FROM Conseils";

@@ -53,9 +53,7 @@
                         <li>
                             <router-link
                                     :to="{name:'Accueil'}">
-
                                Accueil
-
                             </router-link>
                         </li>
                         <li>
@@ -71,13 +69,14 @@
                             </router-link>
                         </li>
                         <li>
-                            <router-link
-                                    :to="{name:'Localisation'}">
-                                Localisation
-                            </router-link>
+                            <a href="#">
+                                <span>Localisation</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><span>L'association</span></a>
+                            <a href="#">
+                                <span>L'association</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -126,16 +125,14 @@
                             </router-link>
                         </div>
                         <div class="titresFooter">
-                            <router-link
-                                    :to="{name:'Localisation'}">
-                                Localisation
-                            </router-link>
+                            <a href="#">
+                                <span>Localisation</span>
+                            </a>
                         </div>
                         <div class="titresFooter">
-                            <router-link
-                                    :to="{name:'Association'}">
-                                L'association
-                            </router-link>
+
+                                <a href="#"><span>L'association</span></a>
+
                         </div>
                     </div>
 
@@ -195,8 +192,6 @@
         {path: '/Conseils',	        name:"Conseils",		       component:Conseils},
 
         {path: '/Mentions',	        name:"Mentions",		       component:Mentions},
-
-
 
     ]
     // Initialisation du router
