@@ -149,9 +149,10 @@
                         <p class="titresFooter">
                             Légal
                         </p>
-                        <p class="texteFooter">
+                        <router-link class="texteFooter"
+                                :to="{name:'Mentions'}">
                             Mentions légales
-                        </p>
+                        </router-link>
                     </div>
 
                     <div class="reseauxSociaux">
@@ -182,7 +183,7 @@
 <script src="Matiere.vue.js"></script>
 <script src="Conseils.vue.js">
 </script>
-
+<script src="MentionsLegales.vue.js"></script>
 
 
 <script>
@@ -192,6 +193,10 @@
 
         {path: '/Matiere',	        name:"Matiere",		           component:Matiere},
         {path: '/Conseils',	        name:"Conseils",		       component:Conseils},
+
+        {path: '/Mentions',	        name:"Mentions",		       component:Mentions},
+
+
 
     ]
     // Initialisation du router

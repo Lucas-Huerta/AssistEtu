@@ -165,6 +165,13 @@ ul>li{
     text-align: left;
 }
 
+/* Mentions */
+
+.texteMentions{
+    text-align: center;
+    margin-top: 5vh;
+}
+
 /* Footer */
 
 .largeurFooter{
